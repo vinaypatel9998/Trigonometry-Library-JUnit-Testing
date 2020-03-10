@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * @version 2.0
+ * @version 3.0
  * @author ASE group-3
  * Sheshan Patel - 110020601
  * Harsh Patel - 110009172
@@ -22,10 +22,10 @@ class TrigonometryFunctionTest {
 	double delta=0.01;
 	
 	@Test
-	public void powerTest()
+	public void powerTest() throws Exception
 	{
-		double pow=TrigonometryFunction.power(3,-1);
-		assertEquals(Math.pow(3, -1), pow, "Function failed to calculate negative power");
+		double pow=TrigonometryFunction.power(3, 1);
+		assertEquals(Math.pow(3, 1),pow,0);
 	}
 	
 	@Test
@@ -36,56 +36,56 @@ class TrigonometryFunctionTest {
 	}
 	
 	@Test
-	public void sinTest1()
+	public void sinTest1() throws Exception
 	{
 		assertEquals(Math.sin(1),TrigonometryFunction.sinTrig(1), delta);
 	}
 	
 	@Test
-	public void cosTest1()
+	public void cosTest1() throws Exception
 	{
 		assertEquals(Math.cos(1),TrigonometryFunction.cosTrig(1), delta);
 	}
 	
 	@Test
-	public void tanTest1()
+	public void tanTest1() throws Exception
 	{
 		assertEquals(Math.tan(1),TrigonometryFunction.tanTrig(1), delta);
 	}
 	
 	@Test
-	public void sinTest2()
+	public void sinTest2() throws Exception
 	{
-		assertEquals(Math.sin(60),TrigonometryFunction.sinTrig(60), "Error..!! Input can't be degree");
+		assertEquals(0.5,TrigonometryFunction.sinTrig(TrigonometryFunction.degreetoradian(30)), delta);
 	}
 	
 	@Test
-	public void cosTest2()
+	public void cosTest2() throws Exception
 	{
-		assertEquals(Math.cos(60),TrigonometryFunction.cosTrig(60), "Error..!! Input can't be degree");
+		assertEquals(0.8660,TrigonometryFunction.cosTrig(TrigonometryFunction.degreetoradian(30)), delta);
 	}
 	
 	@Test
-	public void tanTest2()
+	public void tanTest2() throws Exception
 	{
-		assertEquals(Math.tan(60),TrigonometryFunction.tanTrig(60), "Error..!! Input can't be degree");
+		assertEquals(0.5773,TrigonometryFunction.tanTrig(TrigonometryFunction.degreetoradian(30)), delta);
 	}
 	
 	@Test
-	public void sinTest3()
+	public void sinTest3() throws Exception
 	{
-		assertEquals(Math.sin(90),TrigonometryFunction.sinTrig(90), "Error..!! Input can't be degree");
+		assertEquals(Math.sin(12),TrigonometryFunction.sinTrig(12), "Error..!! radian input can't exceed 6.27");
 	}
 	
 	@Test
-	public void cosTest3()
+	public void cosTest3() throws Exception
 	{
-		assertEquals(Math.cos(90),TrigonometryFunction.cosTrig(90), "Error..!! Input can't be degree");
+		assertEquals(Math.cos(12),TrigonometryFunction.cosTrig(12), "Error..!! radian input can't exceed 6.27");
 	}
 	
 	@Test
-	public void tanTest3()
+	public void tanTest3() throws Exception
 	{
-		assertEquals(Math.tan(90),TrigonometryFunction.tanTrig(90), "Error..!! Input can't be degree");
+		assertEquals(Math.tan(12),TrigonometryFunction.tanTrig(12), "Error..!! radian input can't exceed 6.27");
 	}
 }
