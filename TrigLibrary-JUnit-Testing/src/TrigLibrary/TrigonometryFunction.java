@@ -1,14 +1,13 @@
 package TrigLibrary;
 
 /**
- * @version 3.0
+ * @version 4.0
  * @author ASE group-3
  * Sheshan Patel - 110020601
  * Harsh Patel - 110009172
  * Vinaykumar Patel - 110009163
- * 
- * This class is the implementation of the sine,cosine and tangent trigonometry functions using taylor series
  *
+ *This class is the implementation of the sine,cosine and tangent trigonometry functions using taylor series 
  */
 public class TrigonometryFunction {
 	
@@ -33,7 +32,7 @@ public class TrigonometryFunction {
 		
 		if(power<0)
 			throw new Exception("Invalid power input");
-		
+	
 		for(int i=1;i<=power;i++)
 		{
 			ans=ans*base;
@@ -66,9 +65,10 @@ public class TrigonometryFunction {
 	public static double sinTrig(double angle) throws Exception
 	{
 		double sinvalue=0.0;
+		double angle1=modulo(angle);
 		for(int i=1;i<=11;i++)
 		{
-			sinvalue=sinvalue+(power(-1,i-1)*power(angle,(2*i)-1))/(factorial((2*i)-1));
+			sinvalue=sinvalue+(power(-1,i-1)*power(angle1,(2*i)-1))/(factorial((2*i)-1));
 		}
 		return sinvalue;
 	}
@@ -82,9 +82,10 @@ public class TrigonometryFunction {
 	public static double cosTrig(double angle) throws Exception
 	{
 		double cosvalue=0.0;
+		double angle1=modulo(angle);
 		for(int i=0;i<=10;i++)
 		{
-			cosvalue=cosvalue+(power(-1,i)*power(angle,2*i))/(factorial(2*i));
+			cosvalue=cosvalue+(power(-1,i)*power(angle1,2*i))/(factorial(2*i));
 		}
 		return cosvalue;
 	}
@@ -108,6 +109,16 @@ public class TrigonometryFunction {
 	public static double degreetoradian(double degree)
 	{
 		return (degree*PI)/180;
+	}
+	
+	/**
+	 * This method implements the normalization of angle value that allows functions to sound in all the quadrants 
+	 * @param angle the radian value to be normalized
+	 * @return the normalized value
+	 */
+	public static double modulo(double angle)
+	{
+		return angle%(2*PI);
 	}
 	
 }

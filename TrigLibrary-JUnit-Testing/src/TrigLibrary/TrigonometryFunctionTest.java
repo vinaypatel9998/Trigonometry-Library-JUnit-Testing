@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * @version 3.0
+ * @version 4.0
  * @author ASE group-3
  * Sheshan Patel - 110020601
  * Harsh Patel - 110009172
@@ -74,18 +74,18 @@ class TrigonometryFunctionTest {
 	@Test
 	public void sinTest3() throws Exception
 	{
-		assertEquals(Math.sin(12),TrigonometryFunction.sinTrig(12), "Error..!! radian input can't exceed 6.27");
+		assertEquals(Math.sin(12),TrigonometryFunction.sinTrig(12), delta);
 	}
 	
 	@Test
 	public void cosTest3() throws Exception
 	{
-		assertEquals(Math.cos(12),TrigonometryFunction.cosTrig(12), "Error..!! radian input can't exceed 6.27");
+		assertEquals(Math.cos(12),TrigonometryFunction.cosTrig(12), delta);
 	}
 	
 	@Test
 	public void tanTest3() throws Exception
 	{
-		assertEquals(Math.tan(12),TrigonometryFunction.tanTrig(12), "Error..!! radian input can't exceed 6.27");
+		assertEquals(Math.tan(12),TrigonometryFunction.tanTrig(12), delta);
 	}
 }
