@@ -1,1 +1,2 @@
-With the help of Taylor series Trgionometric fucntion SIN,COS and TAN are implemented and that fucntions are evaluated using Junit.
+The project implements the trigonometric fucntion SIN,COS and TAN using the corresponding taylor series and also included the degree to radian conversion, normalization 
+function (i.e. converting angle between 0-2PI), factorial function and power function. Testing has been implemented using Junit.
