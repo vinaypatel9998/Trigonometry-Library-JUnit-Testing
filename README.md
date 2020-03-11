@@ -23,7 +23,7 @@ Testing has been implemented using Junit.
 3)  Comparing the values further in degree by using degreetoradian conversion function 
 4)  Normalizing the radian values between 0-2*PI using normalization function
 
-<h2>Test Case Implementation in four phase of versions</h2>
+<h2>Test Case Implementation in four phase of versions :</h2>
 
 <h3>Version 1.0</h3>
 
