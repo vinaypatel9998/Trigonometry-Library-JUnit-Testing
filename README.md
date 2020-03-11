@@ -1,6 +1,6 @@
 <h1>User defined trigonometry functions and its testing using JUnit :</h1>
 
-The project implements the trigonometric fucntion SIN,COS and TAN using the corresponding taylor series.
+The project implements the trigonometric function SIN,COS and TAN using the corresponding taylor series.
 Testing has been implemented using Junit.
 
 <h2>Functions included :</h2> 
@@ -29,7 +29,6 @@ Testing has been implemented using Junit.
 
 -   In the first version, we had checked the test cases of trigonometry functions to compare actual 
     and expected radian values. 
-    ![](https://gitlab.cs.uwindsor.ca/ase-lab-group-3/triglibrary-junit-testing/-/blob/master/TrigLibrary-JUnit-Testing/Screenshots/Version%201.0.png)
 
 <h3>Version 2.0</h3>
 
