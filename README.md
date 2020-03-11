@@ -1,0 +1,1 @@
+With the help of Taylor series Trgionometric fucntion SIN,COS and TAN are implemented and that fucntions are evaluated using Junit.
