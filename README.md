@@ -1,6 +1,6 @@
 <h1>User defined trigonometry functions and its testing using JUnit :</h1>
 
-The project implements the trigonometric function SIN,COS and TAN using the corresponding taylor series.
+The project implements the trigonometric function SIN,COS and TAN using the corresponding taylor series.<br/>
 Testing has been implemented using Junit.
 
 <h2>Functions included :</h2> 
